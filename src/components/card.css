@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+.card-container {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  position: absolute;
+  width: 343px;
+  height: 190px;
+  left: 16px;
+  top: 104px;
+  background: #ffe6e2;
+  border-radius: 16px;
+
+}
+
+/* .dislike {
+  position: absolute;
+  left: 7%;
+  right: 80.17%;
+  top: 64.21%;
+  bottom: 12.63%;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+} */
+/* .eye-left {
+  position: absolute;
+  left: 10.2%;
+  right: 88.68%;
+  top: 73.16%;
+  bottom: 24.82%;
+  background: #3632bf;
+} */
+/* .eye-right {
+  position: absolute;
+  left: 15.79%;
+  right: 83.09%;
+  top: 73.16%;
+  bottom: 24.82%;
+  background: #3632bf;
+} */
+/* .frown {
+  position: absolute;
+  left: 14.88%;
+  right: 82.46%;
+  top: 78.71%;
+  bottom: 18.52%;
+  background: #3632bf;
+  transform: rotate(-180deg);
+} */
+
+/* .like {
+  position: absolute;
+  left: 85.41%;
+  right: 11.94%;
+  top: 75.93%;
+  bottom: 21.29%;
+  background: #3632bf;
+} */
+
+/* .smile {
+  position: absolute;
+  left: 83.38%;
+  right: 15.5%;
+  top: 69.64%;
+  bottom: 28.08%;
+  background: #3632bf;
+} */
