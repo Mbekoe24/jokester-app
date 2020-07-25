@@ -2,39 +2,88 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  font-size: 0.9em;
+  color: #000000;
 }
 .main-container {
-  background-color: green;
   display: flex;
   justify-content: center;
-  padding: 20px;
 }
+header {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+.big-smile {
+  width: 0px;
+  height: 50px;
+}
+
 .card-container {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  padding: 24px;
+  padding: 15px 24px 24px 24px;
   /* position: absolute; */
   /* left: 16px;
   top: 104px; */
-  margin-top: 10px;
-  width: 343px;
-  height: 190px;
-
+  margin-top: 50px;
+  width: 450px;
+  height: 250px;
   background: #ffe6e2;
   border-radius: 16px;
 }
+.joke-setup {
+  font-size: 1.5em;
+  line-height: 30px;
+}
+.joke-punchline {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  padding-bottom: 50px;
+}
+.button-feature {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 20px;
+}
+.button-bkg {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 30%;
+  transition: all ease 0.5s;
+}
+.button-bkg:hover {
+  cursor: pointer;
+}
 
-/* .dislike {
-  position: absolute;
-  left: 7%;
-  right: 80.17%;
-  top: 64.21%;
-  bottom: 12.63%;
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 16px;
+/* .like {
+  background-color: #7de4a6;
+  transition: all ease 0.5s;
 } */
-/* .eye-left {
+/* .dislike {
+  background-color: #fa8775;
+  
+} */
+.frown {
+  margin-top: 20px;
+  margin-left: 10px;
+  height: 20px;
+  width: 40px;
+}
+
+.smile {
+  height: 20px;
+  width: 40px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+/* .left-eye {
   position: absolute;
   left: 10.2%;
   right: 88.68%;
@@ -42,7 +91,7 @@ body {
   bottom: 24.82%;
   background: #3632bf;
 } */
-/* .eye-right {
+/* .right-eye {
   position: absolute;
   left: 15.79%;
   right: 83.09%;
@@ -60,20 +109,26 @@ body {
   transform: rotate(-180deg);
 } */
 
-/* .like {
+/* .smile {
   position: absolute;
-  left: 85.41%;
-  right: 11.94%;
-  top: 75.93%;
-  bottom: 21.29%;
+  left: 60%;
+  right: 40%;
+  top: 20%;
+  bottom: 40%;
   background: #3632bf;
 } */
 
-/* .smile {
+/* .dislike-feature {
   position: absolute;
-  left: 83.38%;
-  right: 15.5%;
-  top: 69.64%;
-  bottom: 28.08%;
+  left: 7%;
+  right: 80.17%;
+  top: 64.21%;
+  bottom: 12.63%; 
+} */
+
+/* .like-feature{
+  position: 11.94%;
+  top: 75.93%;
+  bottom: 21.29%;
   background: #3632bf;
 } */

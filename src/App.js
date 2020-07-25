@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import Jokester from "./components/Jokester";
 
 function App() {
