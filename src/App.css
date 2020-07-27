@@ -5,22 +5,26 @@ body {
   font-size: 0.9em;
   color: #000000;
 }
+
 .main-container {
   display: flex;
   justify-content: center;
   margin: 0 20px;
   /* The margins makes it responsive for all screensizes */
 }
+
 header {
   display: flex;
   justify-content: center;
   margin-top: 40px;
 }
+
 .big-smile {
   width: 100px;
   height: 50px;
   margin-bottom: 20px;
 }
+
 footer {
   height: 80px;
 }
@@ -35,10 +39,12 @@ footer {
   background: #ffe6e2;
   border-radius: 16px;
 }
+
 .joke-setup {
   font-size: 1.4em;
   line-height: 30px;
 }
+
 .joke-punchline {
   font-weight: normal;
   font-size: 18px;
@@ -60,6 +66,7 @@ footer {
   border-radius: 30%;
   transition: background ease 0.5s;
 }
+
 .button-bkg:hover {
   cursor: pointer;
 }
