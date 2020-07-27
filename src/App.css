@@ -19,7 +19,7 @@ header {
   height: 50px;
   margin-bottom: 20px;
 }
-footer{
+footer {
   height: 80px;
 }
 
@@ -27,9 +27,6 @@ footer{
   display: flex;
   flex-direction: column;
   padding: 15px 24px 24px 40px;
-  /* position: absolute; */
-  /* left: 16px;
-  top: 104px; */
   margin-top: 50px;
   width: 450px;
   height: 250px;
@@ -52,7 +49,6 @@ footer{
 .button-feature {
   display: flex;
   justify-content: space-around;
-  /* padding-bottom: 20px; */
 }
 .button-bkg {
   width: 60px;
@@ -65,14 +61,6 @@ footer{
   cursor: pointer;
 }
 
-/* .like {
-  background-color: #7de4a6;
-  transition: all ease 0.5s;
-} */
-/* .dislike {
-  background-color: #fa8775;
-  
-} */
 .frown {
   margin-top: 20px;
   margin-left: 10px;
@@ -86,53 +74,3 @@ footer{
   margin-top: 20px;
   margin-left: 10px;
 }
-
-/* .left-eye {
-  position: absolute;
-  left: 10.2%;
-  right: 88.68%;
-  top: 73.16%;
-  bottom: 24.82%;
-  background: #3632bf;
-} */
-/* .right-eye {
-  position: absolute;
-  left: 15.79%;
-  right: 83.09%;
-  top: 73.16%;
-  bottom: 24.82%;
-  background: #3632bf;
-} */
-/* .frown {
-  position: absolute;
-  left: 14.88%;
-  right: 82.46%;
-  top: 78.71%;
-  bottom: 18.52%;
-  background: #3632bf;
-  transform: rotate(-180deg);
-} */
-
-/* .smile {
-  position: absolute;
-  left: 60%;
-  right: 40%;
-  top: 20%;
-  bottom: 40%;
-  background: #3632bf;
-} */
-
-/* .dislike-feature {
-  position: absolute;
-  left: 7%;
-  right: 80.17%;
-  top: 64.21%;
-  bottom: 12.63%; 
-} */
-
-/* .like-feature{
-  position: 11.94%;
-  top: 75.93%;
-  bottom: 21.29%;
-  background: #3632bf;
-} */
