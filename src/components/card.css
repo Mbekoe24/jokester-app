@@ -12,17 +12,21 @@ body {
 header {
   display: flex;
   justify-content: center;
-  padding-top: 40px;
+  margin-top: 40px;
 }
 .big-smile {
-  width: 0px;
+  width: 100px;
   height: 50px;
+  margin-bottom: 20px;
+}
+footer{
+  height: 80px;
 }
 
 .card-container {
   display: flex;
   flex-direction: column;
-  padding: 15px 24px 24px 24px;
+  padding: 15px 24px 24px 40px;
   /* position: absolute; */
   /* left: 16px;
   top: 104px; */
@@ -33,22 +37,22 @@ header {
   border-radius: 16px;
 }
 .joke-setup {
-  font-size: 1.5em;
+  font-size: 1.4em;
   line-height: 30px;
 }
 .joke-punchline {
   font-weight: normal;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 25px;
   display: flex;
   align-items: center;
   color: #000000;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 }
 .button-feature {
   display: flex;
   justify-content: space-around;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
 }
 .button-bkg {
   width: 60px;

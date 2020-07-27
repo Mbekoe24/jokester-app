@@ -4,59 +4,57 @@ import axios from "axios";
 import Like from "../images/smile.png";
 import Smiley from "../images/smile@3x.png";
 import Dislike from "../images/frown.png";
+import * as data from "./jokes.json";
 
 export default function Jokester() {
   const apiUrl = "https://official-joke-api.appspot.com/random_ten";
 
   const [result, setResult] = useState([]);
-  let [likeBackground, setLikeBackground] = useState(true);
-  let [dislikeBackground, setDislikeBackground] = useState(true);
-  const [selected, setSelected] = useState(null);
+  let [emojiBackgrounds, setEmojiBackgrounds] = useState({});
 
   useEffect(() => {
-    axios(apiUrl)
-      .then((res) => {
-        setResult(res.data);
-        console.log(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    // axios(apiUrl)
+    //   .then((res) => {
+    //     setResult(res.data);
+    //     console.log(res.data);
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
+    setResult(data);
+    debugger;
+    const emojis = localStorage.getItem("emojis");
+    if (emojis) {
+      setEmojiBackgrounds(emojis);
+    }
   }, []);
 
-  // function handleClick(e) {
-  //   e.preventDefault();
-  //   // let background = "#7de4a6";
-  //   // setBackground(background);
-  //   // console.log(background, "background");
-  //   console.log("The link was clicked.");
-  // }
-  //  const [selected, setSelected] = useState(null);
-
-  function handleLike() {
-    if (likeBackground) {
-      setLikeBackground((likeBackground = false));
+  function handleLike(id) {
+    if (emojiBackgrounds[id]) {
+      const newEmojis = { ...emojiBackgrounds };
+      delete newEmojis[id];
+      setEmojiBackgrounds(newEmojis);
     } else {
-      setLikeBackground((likeBackground = true));
+      setEmojiBackgrounds({
+        ...emojiBackgrounds,
+        [id]: "liked",
+      });
     }
-    console.log("im like");
-    console.log(likeBackground, "bkng");
-    console.log(setLikeBackground, "setlikebkng");
+    localStorage.setItem("emojis", emojiBackgrounds);
   }
-  function handleDislike() {
-    if (dislikeBackground) {
-      setDislikeBackground((dislikeBackground = false));
+  function handleDislike(id) {
+    if (emojiBackgrounds[id]) {
+      const newEmojis = { ...emojiBackgrounds };
+      delete newEmojis[id];
+      setEmojiBackgrounds(newEmojis);
     } else {
-      setDislikeBackground((dislikeBackground = true));
+      setEmojiBackgrounds({
+        ...emojiBackgrounds,
+        [id]: "disliked",
+      });
     }
-    console.log("im dislike");
-    console.log(dislikeBackground, "bkng");
-    console.log(setDislikeBackground, "setdslbkng");
+    localStorage.setItem("emojis", emojiBackgrounds);
   }
-  //   setData()  {
-  // localStorage.setItem()
-  //   }
-
   return (
     <>
       <header>
@@ -71,23 +69,27 @@ export default function Jokester() {
               <div
                 className="button-bkg"
                 style={{
-                  backgroundColor: dislikeBackground
-                    ? "rgba(0, 0, 0, 0.1)"
-                    : "#fa8775",
+                  backgroundColor:
+                    emojiBackgrounds[card.id] === "disliked"
+                      ? "#fa8775"
+                      : "rgba(0, 0, 0, 0.1)",
                 }}
-                onClick={handleDislike}
+                onClick={() => handleDislike(card.id)}
               >
                 <img className="frown " src={Dislike} alt="dislike" />
+                {/* DISLIKED */}
               </div>
 
               <div
+                // liked
                 className="button-bkg"
                 style={{
-                  backgroundColor: likeBackground
-                    ? "rgba(0, 0, 0, 0.1)"
-                    : "#7de4a6",
+                  backgroundColor:
+                    emojiBackgrounds[card.id] === "liked"
+                      ? "#7de4a6"
+                      : "rgba(0, 0, 0, 0.1)",
                 }}
-                onClick={handleLike}
+                onClick={() => handleLike(card.id)}
               >
                 <img src={Like} className="smile" alt="like" />
               </div>
@@ -95,6 +97,7 @@ export default function Jokester() {
           </div>
         </div>
       ))}
+      <footer></footer>
     </>
   );
 }
