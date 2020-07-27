@@ -2,9 +2,11 @@ import React from "react";
 import Like from "../images/smile.png";
 import Dislike from "../images/frown.png";
 
-export default function Button(props) {
-  const { card, emojiBackgrounds, setEmojiBackgrounds } = props;
-
+export default function Button({
+  card,
+  emojiBackgrounds,
+  setEmojiBackgrounds,
+}) {
   const handleLike = (id) => {
     if (emojiBackgrounds[id]) {
       const newEmojis = { ...emojiBackgrounds };
@@ -49,8 +51,8 @@ export default function Button(props) {
         }}
         onClick={() => handleDislike(card.id)}
       >
-        <img className="frown " src={Dislike} alt="dislike" />
-        {/* DISLIKED */}
+        <img className="frown" src={Dislike} alt="dislike" />
+        
       </div>
 
       <div

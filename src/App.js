@@ -3,7 +3,7 @@ import "./App.css";
 import axios from "axios";
 import Header from "./components/Header";
 import Card from "./components/Card";
-
+import myJoke from "./components/Personal";
 function App() {
   const apiUrl = "https://official-joke-api.appspot.com/random_ten"; // send to app.js
 
@@ -26,6 +26,7 @@ function App() {
   const getJokes = async () => {
     try {
       const res = await axios(apiUrl);
+      res.data.push(myJoke);
       setResult(res.data);
     } catch (err) {
       console.log(err);

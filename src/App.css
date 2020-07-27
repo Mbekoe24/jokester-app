@@ -8,6 +8,7 @@ body {
 .main-container {
   display: flex;
   justify-content: center;
+  margin: 0 20px;
 }
 header {
   display: flex;
@@ -46,16 +47,17 @@ footer {
   color: #000000;
   padding-bottom: 30px;
 }
+
 .button-feature {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .button-bkg {
   width: 60px;
   height: 60px;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 30%;
-  transition: all ease 0.5s;
+  transition: background ease 0.5s;
 }
 .button-bkg:hover {
   cursor: pointer;
