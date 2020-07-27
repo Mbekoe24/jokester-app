@@ -14,7 +14,6 @@ function App() {
     getJokes();
     setEmojis();
   }, []);
-  // stay here
 
   const setEmojis = () => {
     const emojis = localStorage.getItem("emojis");
