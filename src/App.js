@@ -4,6 +4,7 @@ import axios from "axios";
 import Header from "./components/Header";
 import Card from "./components/Card";
 import myJoke from "./components/Personal";
+import Footer from "../src/components/Footer";
 function App() {
   const apiUrl = "https://official-joke-api.appspot.com/random_ten"; // send to app.js
 
@@ -43,7 +44,7 @@ function App() {
           setEmojiBackgrounds={setEmojiBackgrounds}
         />
       ))}
-      <footer></footer>
+      <Footer />
     </div>
   );
 }
