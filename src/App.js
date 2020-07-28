@@ -6,10 +6,10 @@ import Card from "./components/Card";
 import myJoke from "./components/Personal";
 import Footer from "../src/components/Footer";
 function App() {
-  const apiUrl = "https://official-joke-api.appspot.com/random_ten"; // send to app.js
+  const apiUrl = "https://official-joke-api.appspot.com/random_ten";
 
-  const [result, setResult] = useState([]); // in here
-  const [emojiBackgrounds, setEmojiBackgrounds] = useState({}); //in here
+  const [result, setResult] = useState([]);
+  const [emojiBackgrounds, setEmojiBackgrounds] = useState({});
 
   useEffect(() => {
     getJokes();
